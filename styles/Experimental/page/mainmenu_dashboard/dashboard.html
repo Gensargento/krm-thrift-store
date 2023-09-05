@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asset/dashboard.css">
+    <link rel="stylesheet" href="asset/Icon.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <section class="navigation">
+            <img src="asset/images/Logopng.png" alt="Code Verse Hub" class="logo">
+            <div>
+                <img src="asset/images/dashboard_icon.png" alt="dashboard" class="icons">
+                <img src="asset/images/lesson_icon.png" alt="lesson" class="icons">
+               <!-- <img src="asset/images/001-quiz.png" alt="quiz" class="icons"> *optional kung lalagyan ng quizzes*-->
+                <img src="asset/images/settings_icon.png" alt="settings" class="icons">
+            </div>
+            <img src="asset/images/User_Avatar.png" alt="user image" class="user">
+
+        </section>
+        
+        <section class="main">
+            <section class="main"><!-- Main -->
+                <div class="search"><!-- Search -->
+                    <form action="">
+                        <input type="text" name="search" id="searchLesson" placeholder="Search Here">
+                    </form>
+    
+                </div><!-- Search End -->
+    
+
+        <div class="title">
+            <h1>My Lessons</h1>
+                <label for="Lessons">Sort By</label>
+
+                <select name="Lessons" id="lessonFilter">
+                    <option value="none">...</option>
+                    <option value="recent">Recent lesson</option>
+                    <option value="finished">Finished lesson</option>
+                    <option value="ongoing">Ongoing lesson</option>
+                    <option value="stalled">Stalled lesson</option>
+                </select>
+        </div>
+
+        <div class="lesson_list"> <!--lesson list-->
+
+            <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 1-->  
+                <div class="category">
+                    <h2>Exp topic</h2><!--edit this para sa content or topic-->
+                    <p>status of lesson</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                   
+                    <ul class="activity">
+                        <li>example </li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 1-->
+
+            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 2-->
+                <div class="category">
+                    <h2>wally</h2><!--edit this para sa content or topic-->
+                    <p>Active recently</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    
+                    <ul class="activity">
+                        <li> may blod</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 2-->
+
+            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 3-->
+                <div class="category">
+                    <h2> love story</h2><!--edit this para sa content or topic-->
+                    <p>ongoing</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> jeff loves kristine</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 3-->
+
+            <div class="lesson" data-status="finished" title="Finished lesson"> <!--proj 4-->
+                <div class="category">
+                    <h2> Topic 4</h2><!--edit this para sa content or topic-->
+                    <p>Paulol</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> erwin skincare tutorial</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 4-->
+
+            <div class="lesson" data-status="ongoing" title="Ongoing lesson"> <!--proj 5-->
+                <div class="category">
+                    <h2> Topic 5</h2><!--edit this para sa content or topic-->
+                    <p>bentahan ng shabu</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> turuan kayo ni carlos mag abot</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 5-->
+
+            <div class="lesson" data-status="stalled" title="Stalled lesson"> <!--proj 6-->
+                <div class="category">
+                    <h2> Topic 6</h2><!--edit this para sa content or topic-->
+                    <p>pano mag pauwi ng lasing</p><!-- ikaw bahala kung mag lalagay kapa dito or burahin-->
+                    <ul class="activity">
+                        <li> tutorial by gen</li><!--pwede ka mag lagay ng kung ano matuturo sa topic dito-->
+                    </ul>
+                </div>
+            </div><!--proj 6-->
+
+        </div> <!--lesson list end-->
+        </section>
+
+        <section class="secondary"> <!--Secondary-->
+            <div class="chart">
+                <h2>Total Lessons</h2>
+                <div>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+                <div class="complete">
+                    <h3>Completed</h3>
+                    <p>From 5 projects
+                    </p>
+                </div>
+            </div>
+            <div class="recent_project"> <!--recent proj-->
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>Finished</h2>
+                        </div>  
+                    </div>
+                </div>
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>Remaining</h2>
+                        </div> 
+                    </div>
+                </div>
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>ongoing</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="listing">
+                    <div class="tittle">
+                        <div class="category">
+                            <h2>Stalled</h2>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--recent proj end-->
+        </section>
+    </div>
+
+    <!--Chart-->
+    <script src= "asset/js/script.js">
+ 
+    </script>
+
+
+</body>
+</html>
